@@ -1,0 +1,17 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Speed Exploits", "BloodTheme")
+
+-- PLAYER
+local Player = Window:NewTab("Main")
+local PlayerSection = Player:NewSection("Player")
+
+PlayerSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
+
+PlayerSection:NewSlider("Jumppower", "Changes the jumppower", 250, 50, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+end)
+-- Credits
+local Player = Window:NewTab("Credits")
+local PlayerSection = Player:NewSection("Speed")
